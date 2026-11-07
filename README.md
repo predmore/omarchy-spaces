@@ -124,6 +124,8 @@ Some applications or offscreen compositor surfaces do not provide a frame. Those
 omarchy plugin update predmore.spaces
 ```
 
+After an update that changes `gestures.lua`, reload Hyprland to load the updated helper.
+
 If a QML update appears stale, `omarchy-shell shell rescanPlugins` reloads plugins; a shell restart (`omarchy restart shell`) clears the component cache when needed.
 
 To remove: first remove the optional Lua `spaces.setup(...)` block, reload Hyprland and check `hyprctl configerrors`, then run:

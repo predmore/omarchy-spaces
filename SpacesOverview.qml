@@ -23,6 +23,7 @@ Item {
   property string monitorName: ""
   property int openingWorkspace: 1
   property int baseWorkspace: 0
+  property int workspaceSlotCount: 10
   property int selectedSpace: 0
   property int selectedIndex: 0
   property real pagePosition: 0
@@ -43,7 +44,7 @@ Item {
   property string wallpaper: ""
   property string cutoutData: cutoutFile.text()
   readonly property int safeTopInset: Model.safeTopInset(cutoutData, panel.targetMonitor ? panel.targetMonitor.lastIpcObject : null, Commons.Style.bar.notchHeight)
-  readonly property var spaces: Model.spaces(windows, baseWorkspace, settings.workspaceCount)
+  readonly property var spaces: Model.spaces(windows, baseWorkspace, workspaceSlotCount)
   readonly property int selectedWorkspace: spaces[selectedSpace] ? spaces[selectedSpace].id : openingWorkspace
   readonly property var shownWindows: spaces[selectedSpace] ? spaces[selectedSpace].windows : []
   readonly property color foreground: Commons.Color.foreground
@@ -69,6 +70,7 @@ Item {
     monitor = Hyprland.focusedMonitor;
     monitorName = monitor ? monitor.name : "";
     openingWorkspace = monitor && monitor.activeWorkspace ? monitor.activeWorkspace.id : 1;
+    workspaceSlotCount = settings.workspaceCount;
     baseWorkspace = settings.workspaceBase === null ? Model.baseForMonitor(workspaceMap.text(), monitorName, openingWorkspace) : settings.workspaceBase;
     windows = Model.merge([], Hyprland.toplevels.values, monitorName);
     selectedSpace = Math.max(0, spaces.findIndex(function(s) { return s.id === openingWorkspace; }));
