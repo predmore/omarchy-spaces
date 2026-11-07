@@ -1,0 +1,24 @@
+name: Check plugin
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Lua
+        run: sudo apt-get update && sudo apt-get install -y lua5.4
+      - name: Model tests
+        run: node --test tests/model.test.cjs
+      - name: Gesture tests
+        run: lua5.4 tests/gestures.test.lua
+      - name: Package checks
+        run: python3 tests/package_test.py
+      - name: Command syntax
+        run: bash -n bin/omarchy-spaces

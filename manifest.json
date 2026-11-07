@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "predmore.spaces",
+  "name": "Spaces",
+  "version": "1.0.0",
+  "author": "predmore",
+  "description": "A Mission Control-inspired workspace overview with live window previews, native Omarchy styling, and optional trackpad gestures",
+  "kinds": [
+    "overlay"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "overlay": "SpacesOverview.qml"
+  }
+}

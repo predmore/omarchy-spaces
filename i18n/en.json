@@ -1,0 +1,27 @@
+{
+  "title": "Spaces",
+  "all": "All",
+  "windowCount": {
+    "one": "%1 window",
+    "other": "%1 windows"
+  },
+  "empty": "No windows here",
+  "emptyHint": "Click this space above to open an empty desktop.",
+  "previewUnavailable": "Preview unavailable",
+  "navigate": "Navigate",
+  "open": "Open",
+  "dismiss": "Dismiss",
+  "close": "Close overview",
+  "workspace": "Workspace %1",
+  "workspaces": "Workspaces",
+  "scroll": "Scroll for more",
+  "help": "Hover: preview  \u00b7  Two fingers: windows  \u00b7  Three fingers: spaces  \u00b7  Esc: close",
+  "currentWorkspace": "Workspace %1, current desktop",
+  "emptySpace": "Empty",
+  "spaceSummary": "Workspace %1  \u00b7  %2",
+  "previousWindows": "Previous windows",
+  "nextWindows": "More windows",
+  "helpSpaces": "\u2190 \u2192 Spaces  \u00b7  \u2193 Windows  \u00b7  Enter Switch  \u00b7  Esc Close",
+  "helpWindows": "\u2190 \u2192 Windows  \u00b7  \u2191 Spaces  \u00b7  Enter Open  \u00b7  Esc Close",
+  "helpBasic": "Hover: preview  \u00b7  \u2190 \u2192 Windows  \u00b7  Ctrl \u2190 \u2192 Spaces  \u00b7  Esc Close"
+}

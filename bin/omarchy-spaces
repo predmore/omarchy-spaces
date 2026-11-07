@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+case "${1:-toggle}" in
+  show) exec omarchy-shell shell summon predmore.spaces '{}' ;;
+  hide) exec omarchy-shell shell hide predmore.spaces ;;
+  toggle) exec omarchy-shell shell toggle predmore.spaces '{}' ;;
+  *) echo 'usage: omarchy-spaces [show|hide|toggle]' >&2; exit 2 ;;
+esac
